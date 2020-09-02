@@ -1,7 +1,7 @@
 {
 	"name": "asmformat",
 	"publisher": "notaflyinggoose",
-	"displayName": "AsmFormat",
+	"displayName": "Assembly Formatter",
 	"description": "Formats Assembly Code",
 	"version": "1.0.0",
 	"engines": {
@@ -20,7 +20,16 @@
 				"command": "asmformat.format",
 				"title": "Format Asm"
 			}
-		]
+		],
+		"menus": {
+			"editor/context": [
+			  {
+				"when": "resourceExtname == .asm",
+				"command": "asmformat.format",
+				"group": "navigation"
+			  }
+			]
+		  }
 	},
 	"scripts": {
 		"lint": "eslint .",
@@ -37,5 +46,13 @@
 		"mocha": "^8.0.1",
 		"typescript": "^3.8.3",
 		"vscode-test": "^1.4.0"
-	}
+	},
+	"bugs": {
+		"email": "notaflyinggoose@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NotAFlyingGoose/AsmFormat.git"
+	},
+	"homepage": "https://github.com/NotAFlyingGoose/AsmFormat/blob/master/README.md"
 }
